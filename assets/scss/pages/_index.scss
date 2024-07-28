@@ -179,21 +179,7 @@
     .card-list {
       display: flex;
       flex-wrap: wrap;       
-      justify-content: space-around;
-      // justify-content: space-between;
-      // gap:24px;
-      // margin-left: -12px;
-      // margin-right: -12px;
-
-      // @include max-lg{
-      //   flex-direction: column;
-      // }
-  
-      // @include max-md {
-      //   gap: 36px;
-      //   justify-self: center;
-      //   align-items: center;
-      // }
+      justify-content: space-around;      
     }
 
     @media (max-width:992px) {

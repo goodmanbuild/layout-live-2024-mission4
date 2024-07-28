@@ -1,0 +1,58 @@
+
+.container{
+    max-width: 1320px;
+    padding: 0px 12px;
+    margin: 0 auto;   
+
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width:576px) {
+    .container{
+        max-width: 376px;
+    }
+}
+
+
+// @media (max-width:576px) {
+//     .container {
+//         max-width: 376px;
+//     }
+// }
+
+
+// .mobile-large{
+//     max-width: 76;
+// }
+
+.bg-primary {
+    background-color: #AA0601;
+}
+
+.bg-secondary{
+    background-color: #FBF2F2;
+}
+
+.btn{
+    border: 0px;
+}
+
+.btn-primary{
+    background-color: #AA0601;
+    color: #ffffff;
+}
+
+
+.fs-5{
+    font-size: 20px;
+}
+
+.fs-12{
+    font-size: 48px;
+}
+

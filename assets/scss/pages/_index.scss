@@ -1,0 +1,520 @@
+// .index-title {
+//   font-size: 100px;
+// }
+
+.banner{
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  // height: 787px;
+  height: calc(100vh - 80px); //這邊設定使用瀏覽器的高度去
+  align-content: center;
+  @include max-lg{
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true');
+  }
+
+  @include max-md{
+    height: 396px;
+  }
+
+  .banner-inner{
+
+    // outline:1px solid #000;
+    text-align: right;
+    
+
+    .subtitle {
+        font-size: 36px;
+        color: #650300;
+        @include max-md{
+          font-size: 16px;
+        }
+    }
+    
+    .title {
+      font-size: 64px;
+      color: #650300;
+      font-weight: bold;
+      @include max-md {
+          font-size: 24px;
+      }
+    }
+  
+    .buy {
+      font-size: 20px;
+      padding: 8px 12px;
+      @include max-md{        
+        padding: 6px 12px;
+        font-weight: 500;
+      }
+    }
+  }
+
+
+}
+
+.feature{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 80px 0;
+
+  @include max-md{
+    padding: 40px 0;
+  }
+  
+  
+  &-inner{
+    // outline: 1px solid #000;    
+    
+    .title {
+        font-size: 48px;
+        font-weight: bold;
+        color:#650300;
+        text-align: center;
+        margin-bottom: 10px;
+        
+        @include max-md {
+          font-size: 24px;
+        }
+    }
+
+    .card-list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;    
+      // outline: 1px solid #000;
+      margin-left: -12px;
+      margin-right: -12px;      
+      
+    }   
+
+    .card-item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;         
+      width: calc(25% - 18px);
+      // outline: 1px solid #000;
+      padding: 0 12px;    
+         
+    }
+
+    @include max-lg {
+      .card-item {
+        width: calc(50% - 12px);
+      }
+      
+    }
+
+    @media (max-width:767px) {
+      .card-item{
+        margin-bottom: 36px;
+      }
+    }
+
+    @media (max-width:576px) {    
+      .card-item {
+        width: 100%;
+      }
+    }
+  
+    .icon{      
+      width: 84px;
+      height: 84px;
+      margin-bottom: 10px;
+    }
+
+    .subject {      
+      font-size: 24px;
+      font-weight: bold;
+      color: #650300;
+      margin-bottom: 10px;
+    }
+
+    
+  }
+
+  
+
+}
+
+.classic{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 0;
+
+  @include max-md {
+    padding: 40px 0;
+  }
+
+  &-inner {
+    // outline: 1px solid #000;
+
+    @include max-xxl{
+      max-width: 767px;
+    }
+
+    .title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #650300;
+        text-align: center;
+        margin-bottom: 48px;
+    
+        @include max-md {
+          font-size: 24px;
+          margin-bottom: 24px;
+        }
+      }
+         
+    
+    .card-list {
+      display: flex;
+      flex-wrap: wrap;       
+      justify-content: space-around;
+      // justify-content: space-between;
+      // gap:24px;
+      // margin-left: -12px;
+      // margin-right: -12px;
+
+      // @include max-lg{
+      //   flex-direction: column;
+      // }
+  
+      // @include max-md {
+      //   gap: 36px;
+      //   justify-self: center;
+      //   align-items: center;
+      // }
+    }
+
+    @media (max-width:992px) {
+      .card-list{
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width:767px) {
+      .card-list{
+          justify-self: center;
+          align-items: center;
+      }
+    }
+    
+    .card-item {
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      align-items: center;        
+      // outline: 1px solid #000;             
+    }
+
+    @media (max-width:767px) {
+      .card-item {
+        margin-bottom: 36px;
+      }
+    }
+
+    .pic{            
+      height: 416px;
+    
+    }
+
+    @media (max-width:992px) {
+      .pic {
+          height: 336px;
+      }
+    }
+
+    @media (max-width:767px) {
+      .pic {
+        height: 336px;
+      }
+    }
+
+
+    .subject {
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      font-style: italic;
+      color: #AA0601;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.cobrand{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 80px 0;
+  
+  @include max-md {
+      padding: 40px 0;
+  }
+
+  &-inner{
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 48px;
+  
+      @include max-md {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .cobrand-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      // outline: 1px solid #fff;
+      
+    }
+
+    @media (max-width:1400px) {
+      .cobrand-list {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+  
+    .card-img{
+      width: 648px;
+      height: 240px;
+      background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @media (max-width:1400px) {
+      .card-img {
+          width: 696px;
+          height: 240px;
+      }
+      
+    }
+
+    @media (max-width:767px) {
+      .card-img {
+          width: 348px;
+          height: 240px;
+        }
+    }
+
+    .card-img-double{
+      background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1.png?raw=true');
+     
+     
+    }
+
+    .card-img-youth{
+      background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2.png?raw=true');       
+    }
+
+    @media (max-width:767px) {
+      .card-img-double {
+          background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1-sm.png?raw=true');            
+        }
+
+      .card-img-youth {
+        background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2-sm.png?raw=true');
+      }
+    }
+
+    .subject{
+      background-color: #ffffff;
+      color: #AA0601;
+      font-size: 64px;
+      font-weight: 900;
+      font-style: italic;
+      text-align: center;
+    }
+
+  }
+}
+
+.recommend{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+
+  @include max-md {
+    padding: 40px 0;
+  }
+
+  &-inner {
+   
+    .title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #650300;
+        text-align: center;
+        margin-bottom: 48px;
+    
+        @include max-md {
+          font-size: 24px;
+        }
+      }
+    
+      .card-list {
+        display: flex;
+        flex-wrap: wrap;       
+        justify-content: center;
+        // outline: 1px solid #000;
+        margin-left: -12px;
+        margin-right: -12px;
+           
+      }
+    
+      .card-item {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;      
+        width: calc(25% - 18px);
+        // outline: 1px solid #000;
+        padding: 0 12px;
+        height: 511px;        
+      }  
+
+      @include max-lg {
+        .card-item {
+          width: calc(50% - 12px);
+          margin-bottom: 24px;
+        }
+
+      }
+    
+      @media (max-width:576px) {
+        .card-item {
+          width: 100%;
+        }
+      }
+      
+      
+      .wrapper{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 2px 6px #00000029;
+        border: 1px solid #DEE2E6;
+        border-radius: 4px;
+        max-width: 100%;
+        height: 100%;
+      }
+
+      .context{
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        gap:8px;     
+        height: 100%;
+      }
+
+      .date{
+        font-size: 14px;
+        color: #707070;
+        margin-top: auto;
+        
+      }
+  }
+  
+
+}
+
+.contract { 
+  font-family: "Noto Sans TC";
+
+  padding: 80px 0;
+
+  @include max-md {
+    padding: 40px 0;
+  }
+
+  &-inner {
+    // outline: 1px solid #000;   
+    max-width: 636px;
+
+    .wrapper {
+        
+        margin: 0 auto;
+        // outline: 1px solid #000;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      color: #650300;
+      text-align: center;
+      margin-bottom: 48px;
+
+      @include max-md {
+        font-size: 24px;
+      }
+    }
+
+    .desc{
+      margin-bottom: 24px;
+    }
+
+    .row{
+      margin-bottom: 8px;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"]
+    {      
+      width: 100%;
+      // outline: 1px solid green;
+      padding: 8px 4px;
+  
+    }
+
+    textarea{
+      width: 100%;
+      height: 136px;
+    }
+
+    .contract-footer{
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .submit{
+      padding: 16px 176px;      
+    }
+
+    @media (max-width:767px) {
+      .submit {
+          padding: 16px 136px;
+        }
+    }
+
+    .submit:hover{
+      cursor: pointer;
+    }
+
+  }
+}
